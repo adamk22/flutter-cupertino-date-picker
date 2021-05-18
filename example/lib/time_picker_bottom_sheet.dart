@@ -85,7 +85,7 @@ class _TimePickerBottomSheetState extends State<TimePickerBottomSheet> {
             Row(
               children: <Widget>[
                 Text('show custom title', style: hintTextStyle),
-                Checkbox(value: true, onChanged: (value) {}),
+                Checkbox(value: false, onChanged: (value) {}),
               ],
             ),
 
@@ -152,19 +152,19 @@ class _TimePickerBottomSheetState extends State<TimePickerBottomSheet> {
       initialDateTime: DateTime.parse(INIT_DATETIME),
       dateFormat: _format,
       pickerMode: DateTimePickerMode.time, // show TimePicker
-      pickerTheme: DateTimePickerTheme(
-        title: Container(
-          decoration: BoxDecoration(color: Color(0xFFEFEFEF)),
-          width: double.infinity,
-          height: 56.0,
-          alignment: Alignment.center,
-          child: Text(
-            'custom Title',
-            style: TextStyle(color: Colors.green, fontSize: 24.0),
-          ),
-        ),
-        titleHeight: 56.0,
-      ),
+      // pickerTheme: DateTimePickerTheme(
+      //   title: Container(
+      //     decoration: BoxDecoration(color: Color(0xFFEFEFEF)),
+      //     width: double.infinity,
+      //     height: 56.0,
+      //     alignment: Alignment.center,
+      //     child: Text(
+      //       'custom Title',
+      //       style: TextStyle(color: Colors.green, fontSize: 24.0),
+      //     ),
+      //   ),
+      //   titleHeight: 56.0,
+      // ),
       onCancel: () {
         debugPrint('onCancel');
       },
